@@ -20,7 +20,7 @@ app.get('/rate' , (req,res)=> {
     res.jsonp({"message" : "rate limter hot "})
 })
 
-app.get('/rate/api' , (req,res)=> {
+app.get('/login' , (req,res)=> {
     res.jsonp({"message" : "rate api"})
 })
  
@@ -28,7 +28,7 @@ app.get('/rate/v1' , (req,res)=> {
     res.jsonp({"message" : "rate route v1 "})
 })
 
-// Protecting the register route making it available for only 2 
+// Protecting the register route making it available for only 2 maximum request
 const registerLimitter = limitter({
     windowMs : 5000,
     max : 2
